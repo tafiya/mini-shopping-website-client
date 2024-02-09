@@ -1,0 +1,63 @@
+[
+    {
+      "name": "Modern Leather Armchair",
+      "price": 599.99,
+      "details": "Sleek and comfortable armchair upholstered in genuine leather. Perfect for any contemporary living room or office space.",
+      "picture": "https://i.ibb.co/s9LSvTP/chair.png"
+    },
+    {
+      "name": "Vintage Velvet Sofa",
+      "price": 899.99,
+      "details": "Elegant vintage-style sofa with plush velvet upholstery. Adds a touch of luxury to any room.",
+      "picture": "https://i.ibb.co/yQYhbjC/Shofa3.png"
+    },
+    {
+        "name": "Ergonomic Mesh Office Chair",
+        "price": 249.99,
+        "details": "Highly adjustable ergonomic office chair with breathable mesh backrest. Provides optimal support for long hours of work.",
+        "picture": "https://i.ibb.co/603L3F6/chair1.png"
+      },
+    {
+      "name": "Rustic Wooden Dining Chair",
+      "price": 79.99,
+      "details": "Handcrafted wooden dining chair with a rustic finish. Sturdy and charming, perfect for farmhouse-style kitchens.",
+      "picture": "https://i.ibb.co/zbmBfKV/table.png"
+    },
+    {
+      "name": "Sectional L-Shaped Sofa",
+      "price": 1499.99,
+      "details": "Spacious L-shaped sectional sofa upholstered in soft fabric. Offers plenty of seating for family and guests.",
+      "picture": "https://i.ibb.co/j41QnHJ/Shofa1.png"
+    },
+    {
+      "name": "Industrial Pendant Light",
+      "price": 89.99,
+      "details": "Stylish pendant light with an industrial design. Adds a touch of urban flair to any room.",
+      "picture": "https://i.ibb.co/1Z9C0tR/light.png"
+    },
+    {
+      "name": "Eames Lounge Chair and Ottoman",
+      "price": 1499.99,
+      "details": "Iconic mid-century modern lounge chair and ottoman set. Timeless design and ultimate comfort.",
+      "picture": "https://i.ibb.co/RCrwhWc/Shofa2.png"
+    },
+    {
+      "name": "Sleek Glass Coffee Table",
+      "price": 299.99,
+      "details": "Contemporary coffee table with a tempered glass top and metal frame. Adds sophistication to any living space.",
+      "picture": "https://i.ibb.co/7Jf2BNR/pexels-pixabay-280471-removebg-preview.png"
+    },
+    {
+      "name": "Vintage Chandelier",
+      "price": 499.99,
+      "details": "Exquisite vintage chandelier with intricate details. Adds a touch of glamour to dining rooms or entryways.",
+      "picture": "https://i.ibb.co/vYPZY04/chair2.png"
+    },
+    {
+        "name": "Classic Leather Recliner",
+        "price": 799.99,
+        "details": "Luxurious leather recliner chair with plush cushioning. Perfect for relaxing in style after a long day.",
+        "picture": "https://i.ibb.co/ZYTG65M/di-an-h-g-8-Mr-EZAvy-E-unsplash-removebg-preview.png"
+      }
+  ]
+  
