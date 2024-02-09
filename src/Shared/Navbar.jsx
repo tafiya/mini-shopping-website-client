@@ -59,16 +59,13 @@ const Navbar = () => {
         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
           <li><a className="text-accent text-base font-semibold">{user.displayName}</a></li>
           <li><a><button className="hover:btn btn-outline   " onClick={handleLogout}>Logout</button></a></li>
-          <li><Link to='/dashboard/dHome'><button className=" hover:btn btn-outline  ">Dashboard</button></Link></li>
+          <li><Link to='/dashboard/cart'><button className=" hover:btn btn-outline  ">Dashboard</button></Link></li>
 
         </ul>
       </div> :<Link to='/login'><button className=" btn btn-outline text-black">Join us</button></Link>
     
       }
-      {/* <li><Link to='/dashboard/cart'> <button className="btn">
-     <FaShoppingCart />
-  <div className="badge badge-secondary"> +{cart.length}</div>
-</button></Link></li> */}
+     
         </div>
       </div>
         </>

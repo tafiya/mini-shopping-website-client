@@ -1,7 +1,6 @@
 
-// import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
+
 import useCart from "../../hooks/useCart";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { FaTrashAlt } from "react-icons/fa";
@@ -40,27 +39,22 @@ const Cart = () => {
     }
 
     return (
-        <div className=" max-w-screen-xl mx-auto ">
+        <div className=" max-w-screen-xl mx-auto border border-l-orange-100 p-4 rounded-lg ">
             <div className="flex justify-evenly mb-8 ">
                 <h2 className="md:text-4xl text-xl">Items: {cart.length}</h2>
                 <h2 className="md:text-4xl text-xl">Total Price: {totalPrice}</h2>
-                {/* {cart.length ? <Link to="/dashboard/payment">
-                    <button className="btn btn-primary">Pay</button>
-                </Link>:
-                <button disabled className="btn btn-primary">Pay</button>
-                } */}
 
             </div>
             <div className="  ">
                 <table className="table ">
                     {/* head */}
-                    <thead>
+                    <thead className="text-lg bg-orange-300 shadow rounded-xl">
                         <tr>
                             <th>
                                 #
                             </th>
                             <th>Image</th>
-                            <th>Name</th>
+                            <th>Item</th>
                             <th>Price</th>
                             <th>Action</th>
                         </tr>
@@ -80,7 +74,7 @@ const Cart = () => {
                                         </div>
                                     </div>
                                 </td>
-                                <td>
+                                <td className="text-base">
                                     {item.name}
                                 </td>
                                 <td>${item.price}</td>

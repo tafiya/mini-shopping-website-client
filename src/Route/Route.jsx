@@ -11,6 +11,7 @@ import AllUsers from "../Pages/dashboard/AllUsers/AllUsers";
 
 
 
+
 export const router = createBrowserRouter([
     {
       path: "/",
@@ -70,6 +71,7 @@ export const router = createBrowserRouter([
             path: 'addItems',
             element: <AddItems></AddItems>
           },
+        
           // {
           //   path: 'manageItems',
           //   element: <AdminRoute><ManageItems></ManageItems></AdminRoute>

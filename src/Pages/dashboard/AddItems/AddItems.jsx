@@ -58,13 +58,13 @@ const AddItems = () => {
 
     return (
         <div>
-            
-            <div>
-           
-                <form onSubmit={handleSubmit(onSubmit)}>
+            <h2 className=" text-2xl text-center mt-12 font-semibold"> Add Items for DEPOT</h2>
+            <div className=" flex justify-center ">
+                    
+                <form className=" w-1/2 mt-8 p-6 rounded-lg shadow-xl border border-orange-200" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-control w-full my-6">
                         <label className="label">
-                            <span className="label-text">Item Name*</span>
+                            <span className="label-text text-base">Item Name*</span>
                         </label>
                         <input
                             type="text"
@@ -78,9 +78,9 @@ const AddItems = () => {
                 
 
                         {/* price */}
-                        <div className="form-control w-full my-6">
+                        <div className="form-control w-full  my-6">
                             <label className="label">
-                                <span className="label-text">Price*</span>
+                                <span className="label-tex text-base">Price*</span>
                             </label>
                             <input
                                 type="number"
@@ -91,18 +91,18 @@ const AddItems = () => {
 
                     </div>
                     {/*details */}
-                    <div className="form-control">
+                    <div className="form-control w-full  my-6">
                         <label className="label">
-                            <span className="label-text">Details</span>
+                            <span className="label-text text-base">Details</span>
                         </label>
-                        <textarea {...register('details')} className="textarea textarea-bordered h-24" placeholder="Bio"></textarea>
+                        <textarea {...register('details')} className="textarea textarea-bordered h-24" placeholder="Details"></textarea>
                     </div>
 
-                    <div className="form-control w-full my-6">
+                    <div className="form-control w-1/2 my-6">
                         <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
                     </div>
 
-                    <button className="btn">
+                    <button className="btn bg-orange-300 w-full">
                         Add Item <FaUtensils className="ml-4"></FaUtensils>
                     </button>
                 </form>
