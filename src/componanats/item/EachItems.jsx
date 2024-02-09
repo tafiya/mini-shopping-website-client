@@ -1,54 +1,64 @@
+import Swal from 'sweetalert2';
+import useAxiosSecure from '../../hooks/useAxiosSecure';
 import '../item/Item.css';
 import { TiShoppingCart } from "react-icons/ti";
+import UseAuth from '../../hooks/UseAuth';
+import { useLocation, useNavigate } from 'react-router-dom';
+import useCart from '../../hooks/useCart';
 const EachItems = ({item}) => {
     const {_id,name,price,details,picture}=item;
+    const {user}=UseAuth();
+    const navigate =useNavigate()
+    const location =useLocation()
+    const axiosSecure =useAxiosSecure();
+    const [,refetch]=useCart();
 
     const handleCart=()=>{
         //send cart to database
-        // if(user && user.email)
-        // {
-        //   const cartItem={
-        //     menuId:_id,
-        //     email: user.email,
-        //     name,
-        //     image,
-        //     price
-        //   }
-        //   axiosSecure.post('/carts',cartItem)
-        //   .then(res=>{
-        //     console.log(res.data)
-        //     if(res.data.insertedId)
-        //     {
-        //       Swal.fire({
-        //         position: "top-end",
-        //         icon: "success",
-        //         title: `${name} is successfully added`,
-        //         showConfirmButton: false,
-        //         timer: 1500
-        //       });
-        //       //refetch cart to update the cart items count
-        //       refetch();
+        if(user && user.email)
+        {
+          const cartItem={
+            menuId:_id,
+            email: user.email,
+            name,
+            picture,
+            price
+          }
+          axiosSecure.post('/carts',cartItem)
+          .then(res=>{
+            console.log(res.data)
+            if(res.data.insertedId)
+            {
+              Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: `${name} is successfully added`,
+                showConfirmButton: false,
+                timer: 1500
+              });
+              //refetch cart to update the cart items count
+              refetch();
   
-        //     }
-        //   })
-        // }
-        // else{
-        //   Swal.fire({
-        //     title: "You are not logged in",
-        //     text: "Please login to add cart!",
-        //     icon: "warning",
-        //     showCancelButton: true,
-        //     confirmButtonColor: "#3085d6",
-        //     cancelButtonColor: "#d33",
-        //     confirmButtonText: "Please login"
-        //   })
-        //   .then((result) => {
-        //     if (result.isConfirmed) {
-        //       navigate('/login', {state:{from:location}});
+            }
+          })
+        }
+        else{
+          Swal.fire({
+            title: "You are not logged in",
+            text: "Please login to add cart!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Please login"
+          })
+          .then((result) => {
+            if (result.isConfirmed) {
+              navigate('/login', {state:{from:location}});
          
-        //     }
-        //   });
-        // }
+            }
+          });
+        }
       }
     return (
         <div className='card card-compact w-96 bg-base-100 shadow-xl'>

@@ -4,6 +4,10 @@ import Home from "../Pages/Home/Home";
 //import Cart from "../Pages/Cart/Cart";
 import Signup from "../Pages/Signup/Signup";
 import Login from "../Pages/Login/Login";
+import Cart from "../Pages/Cart/Cart";
+import Dashboard from "../layouts/DashBoard";
+import AddItems from "../Pages/dashboard/AddItems/AddItems";
+import AllUsers from "../Pages/dashboard/AllUsers/AllUsers";
 
 
 
@@ -44,49 +48,41 @@ export const router = createBrowserRouter([
     },
   
    
-    // {
-    //     path: 'dashboard',
-    //     element: <Dashboard></Dashboard>,
-    //     children: [
+    {
+      path: 'dashboard',
+      element: <Dashboard></Dashboard>,
+      children: [
+        {
+          path: 'cart',
+          element: <Cart></Cart>
+        },
+        // {
+        //   path: 'payment',
+        //   element: <Payment></Payment>
+        // },
+        // {
+        //   path: 'paymentHistory',
+        //   element: <PaymentHistory></PaymentHistory>
+        // },
 
-    //       {
-    //         path: 'addPost',
-    //         element:<PrivateRouter><AddPost></AddPost></PrivateRouter>
-    //       },
-    //       {
-    //         path: 'dHome',
-    //         element:<Dhome></Dhome>
-    //       },
-    //       {
-    //         path:'myProfile',
-    //         element:<PrivateRouter><MyProfile></MyProfile></PrivateRouter>,
-
-    //       },
-    //       {
-    //         path:'myPosts',
-    //         element:<PrivateRouter><MyPost></MyPost></PrivateRouter>,
-
-    //       },
-          
-    //     {
-    //         path: 'manageUser',
-    //         element:<AdminRoute><AllUsers></AllUsers></AdminRoute>
-    //       },
-    //       {
-    //         path:'announcement',
-    //         element:<AdminRoute><Announcement></Announcement></AdminRoute>
-    //       },
-
-
-    //       {
-    //           path: 'adminProfile',
-    //           element:<AdminProfile><AdminProfile></AdminProfile></AdminProfile> 
-    //         },
-    //       {
-    //           path: 'reportComment',
-    //           element: <AdminRoute><ReportedComment></ReportedComment></AdminRoute>
-    //         },
-
-    //     ]
-    //   }
+          // admin routes
+          {
+            path: 'addItems',
+            element: <AddItems></AddItems>
+          },
+          // {
+          //   path: 'manageItems',
+          //   element: <AdminRoute><ManageItems></ManageItems></AdminRoute>
+          // },
+          // {
+          //   path: 'updateItem/:id',
+          //   element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
+          //   loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}`)
+          // },
+          {
+            path: 'users',
+            element: <AllUsers></AllUsers>
+          }
+      ]
+    }
   ]);

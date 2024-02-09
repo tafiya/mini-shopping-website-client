@@ -12,22 +12,22 @@ const Login = () => {
     const navigate =useNavigate();
     const location =useLocation();
     const from =location.state?.from?.pathname || "/";
-    useEffect(()=>{
-        loadCaptchaEnginge(6); 
-    },[])
-    const handleValidCaptcha=e=>{
-        const user_captcha_value=e.target.value;
-        console.log(user_captcha_value);
-        if (validateCaptcha(user_captcha_value)==true) {
+    // useEffect(()=>{
+    //     loadCaptchaEnginge(6); 
+    // },[])
+    // const handleValidCaptcha=e=>{
+    //     const user_captcha_value=e.target.value;
+    //     console.log(user_captcha_value);
+    //     if (validateCaptcha(user_captcha_value)==true) {
            
-            setDisable(false);
-        }
-        else
-        {
-            setDisable(true);
-        }
+    //         setDisable(false);
+    //     }
+    //     else
+    //     {
+    //         setDisable(true);
+    //     }
 
-    }
+    // }
     const handleLogin=e=>{
         e.preventDefault();
         const form=e.target;
@@ -72,17 +72,17 @@ const Login = () => {
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
               </div>
-              <div className="form-control">
+              {/* <div className="form-control">
                 <label className="label">
                 <LoadCanvasTemplate />
                 </label>
                 <input onBlur={handleValidCaptcha} type="text" placeholder="type the text above" name="captcha" className="input input-bordered" required />
-                {/* <button onClick={handleValidCaptcha} className="btn btn-outline btn-sm mt-2">validate</button> */}
-              
-              </div>
-              <div className="form-control mt-6">
-                <input disabled={disable} type="submit"  className="btn btn-primary" value="Login" />
                 
+              
+              </div> */}
+              <div className="form-control mt-6">
+                <input  type="submit"  className="btn btn-primary" value="Login" />
+                {/* disabled={disable} */}
               </div>
             </form>
             <p className=' p-4 text-base'><small>New here? <Link to='/signup'><span className=' text-lg text-green-700'>Create an Account</span></Link></small></p>
