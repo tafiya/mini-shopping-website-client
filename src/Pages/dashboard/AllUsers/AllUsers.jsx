@@ -67,15 +67,15 @@ const AllUsers = () => {
     }
 
     return (
-        <div className="border border-l-orange-100 p-4 rounded-lg">
+        <div className="md:border md:border-l-orange-100 md:p-4 rounded-lg">
             <div className="flex justify-evenly my-4 ">
                 <h2 className="text-3xl">All Users</h2>
                 <h2 className="text-3xl">Total Users:{users.length}</h2>
             </div>
             <div className="overflow-x-auto">
-                <table className="table table-zebra w-full">
+                <table className="table table-zebra md:w-full">
                     {/* head */}
-                    <thead className="text-lg bg-orange-300 shadow rounded-xl">
+                    <thead className="md:text-lg md:bg-orange-300 md:shadow md:rounded-xl">
                         <tr>
                             <th></th>
                             <th>Name</th>
@@ -88,15 +88,15 @@ const AllUsers = () => {
                         {
                             users.map((user, index) => <tr key={user._id}>
                                 <th>{index + 1}</th>
-                                <td className=" uppercase text-base">{user.name}</td>
+                                <td className=" md:uppercase md:text-base">{user.name}</td>
                                 <td>{user.email}</td>
                                 <td>
                                     { user.role === 'admin' ?<button className="btn btn-lg bg-orange-100"><RiAdminLine className="text-black 
-                                        text-2xl" /> </button> : <button
+                                        md:text-2xl" /> </button> : <button
                                        onClick={() => handleMakeAdmin(user)}
                                         className="btn btn-lg bg-orange-500">
                                         <FaUsers className="text-white 
-                                        text-2xl"></FaUsers>
+                                        md:text-2xl"></FaUsers>
                                     </button>}
                                     
                                 </td>

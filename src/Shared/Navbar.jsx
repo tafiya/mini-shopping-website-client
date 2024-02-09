@@ -1,14 +1,9 @@
 import { useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 
-import { Link, NavLink } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 
-// import { useContext } from "react";
-// import { AuthContext } from "../Providers/AuthProvider";
-// import profile from '../assets/image/istockphoto-1495088043-612x612.jpg'
-// import Swal from "sweetalert2";
-// import useAnnouncement from "../hooks/useAnnouncement";
 import useCart from './../hooks/useCart';
 import Swal from "sweetalert2";
 
@@ -26,7 +21,7 @@ const Navbar = () => {
   }
     const navOption=<>
     <li><Link to='/'>Home</Link></li>
-    {/* <li><NavLink to='/membership'>Membership</NavLink></li> */}
+
     <li><Link to='/dashboard/cart'>
      <FaShoppingCart />
   <div className="badge badge-secondary"> +{cart.length}</div>
@@ -35,7 +30,7 @@ const Navbar = () => {
     </>
     return (
         <>
-             <div className="navbar  text-black fixed z-10 bg-white">
+             <div className="navbar md:h-20 h-8  text-black fixed z-10 bg-white">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -57,7 +52,7 @@ const Navbar = () => {
         user?<div className="dropdown dropdown-bottom dropdown-end text-black">
         <label tabIndex={0} className=" m-1"><img src={user.photoURL? user.photoURL:profile} alt="" className=" border rounded-full h-12 w-12" /></label>
         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-          <li><a className="text-accent text-base font-semibold">{user.displayName}</a></li>
+          <li><a className="text-black uppercase text-base font-semibold">{user.displayName}</a></li>
           <li><a><button className="hover:btn btn-outline   " onClick={handleLogout}>Logout</button></a></li>
           <li><Link to='/dashboard/cart'><button className=" hover:btn btn-outline  ">Dashboard</button></Link></li>
 

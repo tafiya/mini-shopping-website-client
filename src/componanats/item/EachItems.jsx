@@ -3,7 +3,7 @@ import useAxiosSecure from '../../hooks/useAxiosSecure';
 import '../item/Item.css';
 import { TiShoppingCart } from "react-icons/ti";
 import UseAuth from '../../hooks/UseAuth';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useCart from '../../hooks/useCart';
 const EachItems = ({item}) => {
     const {_id,name,price,details,picture}=item;
@@ -66,7 +66,8 @@ const EachItems = ({item}) => {
 		<img className="pic1 " src={picture} />
 		<div className="card_effect_in">
 			<img src={picture} className=''/>
-			<a href="#" className=' text-center' >Quick Look</a>
+      <Link className='text-center' to={`itemView/${_id}`}>Quick Look</Link>
+			
 		</div>   
         </div>
         <div className="card-body items-center h-1/4">

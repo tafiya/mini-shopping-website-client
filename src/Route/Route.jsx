@@ -8,6 +8,7 @@ import Cart from "../Pages/Cart/Cart";
 import Dashboard from "../layouts/DashBoard";
 import AddItems from "../Pages/dashboard/AddItems/AddItems";
 import AllUsers from "../Pages/dashboard/AllUsers/AllUsers";
+import ItemView from "../Pages/QuickView/ItemView";
 
 
 
@@ -20,6 +21,11 @@ export const router = createBrowserRouter([
         {
             path:'/',
             element:<Home></Home>
+        },
+        {
+          path:'itemView/:id',
+          element:<ItemView></ItemView>
+
         },
         // {
         //   path:'cart',

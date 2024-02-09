@@ -5,7 +5,7 @@ import Items from "../../componanats/item/Items";
 const Home = () => {
     return (
         <div>
-            <Banner></Banner>
+            <Banner ></Banner>
             <Items></Items>
             
         </div>

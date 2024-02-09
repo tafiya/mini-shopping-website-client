@@ -39,7 +39,7 @@ const Cart = () => {
     }
 
     return (
-        <div className=" max-w-screen-xl mx-auto border border-l-orange-100 p-4 rounded-lg ">
+        <div className=" max-w-screen-xl mx-auto">
             <div className="flex justify-evenly mb-8 ">
                 <h2 className="md:text-4xl text-xl">Items: {cart.length}</h2>
                 <h2 className="md:text-4xl text-xl">Total Price: {totalPrice}</h2>
@@ -48,7 +48,7 @@ const Cart = () => {
             <div className="  ">
                 <table className="table ">
                     {/* head */}
-                    <thead className="text-lg bg-orange-300 shadow rounded-xl">
+                    <thead >
                         <tr>
                             <th>
                                 #
@@ -74,7 +74,7 @@ const Cart = () => {
                                         </div>
                                     </div>
                                 </td>
-                                <td className="text-base">
+                                <td >
                                     {item.name}
                                 </td>
                                 <td>${item.price}</td>

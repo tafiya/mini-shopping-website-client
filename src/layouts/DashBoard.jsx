@@ -1,4 +1,4 @@
-import {  FaEnvelope, FaHome,  FaShoppingCart, FaUsers, FaUtensils } from "react-icons/fa";
+import {  FaHome,  FaShoppingCart, FaUsers, FaUtensils } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../hooks/useCart";
 import useAdmin from "../hooks/useAdmin";
@@ -21,11 +21,12 @@ const Dashboard = () => {
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black">
             {
                         isAdmin ? <>
-                            <li>
-                                <NavLink to="/dashboard/adminHome">
-                                    <FaHome></FaHome>
-                                    Admin Home</NavLink>
-                            </li>
+                         <li>
+                                    <NavLink to="/dashboard/cart">
+                                        <FaShoppingCart></FaShoppingCart>
+                                        AdminCart ({cart.length})</NavLink>
+                                </li>
+                           
                             <li>
                                 <NavLink to="/dashboard/addItems">
                                     <FaUtensils></FaUtensils>
@@ -40,11 +41,7 @@ const Dashboard = () => {
                         </>
                             :
                             <>
-                                <li>
-                                    <NavLink to="/dashboard/userHome">
-                                        <FaHome></FaHome>
-                                        User Home</NavLink>
-                                </li>
+                         
                             
                                 <li>
                                     <NavLink to="/dashboard/cart">
@@ -60,11 +57,7 @@ const Dashboard = () => {
                             <FaHome></FaHome>
                             Home</NavLink>
                     </li>
-                    <li>
-                        <NavLink to="/order/contact">
-                            <FaEnvelope></FaEnvelope>
-                            Contact</NavLink>
-                    </li>
+                  
             </ul>
           </div>
          <div className=" flex">
@@ -84,16 +77,7 @@ const Dashboard = () => {
                                     <FaUtensils></FaUtensils>
                                     Add Items</NavLink>
                             </li>
-                            {/* <li>
-                                <NavLink to="/dashboard/manageItems">
-                                    <FaList></FaList>
-                                    Manage Items</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/dashboard/bookings">
-                                    <FaBook></FaBook>
-                                    Manage Bookings</NavLink>
-                            </li> */}
+                     
                             <li>
                                 <NavLink to="/dashboard/users">
                                     <FaUsers></FaUsers>
@@ -102,11 +86,7 @@ const Dashboard = () => {
                         </>
                             :
                             <>
-                                <li>
-                                    <NavLink to="/dashboard/userHome">
-                                        <FaHome></FaHome>
-                                        User Home</NavLink>
-                                </li>
+                               
                             
                                 <li>
                                     <NavLink to="/dashboard/cart">
@@ -123,11 +103,7 @@ const Dashboard = () => {
                             <FaHome></FaHome>
                             Home</NavLink>
                     </li>
-                    <li>
-                        <NavLink to="/order/contact">
-                            <FaEnvelope></FaEnvelope>
-                            Contact</NavLink>
-                    </li>
+                
                 </ul>
             </div>
             {/* dashboard content */}
